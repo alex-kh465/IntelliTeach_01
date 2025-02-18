@@ -26,59 +26,59 @@ st.sidebar.image("assets/Picture1.jpg", width=200)
 st.sidebar.title("🔍 Christ IntelliTeach")
 st.sidebar.subheader("AI-Powered Education Toolkit")
 
-# Custom CSS for horizontal navbar
-st.markdown(
-    """
-    <style>
-        .navbar {
-            display: flex;
-            justify-content: center;
-            background-color: #4CAF50;
-            padding: 10px;
-            border-radius: 10px;
-        }
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 14px 20px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-        .navbar a:hover {
-            background-color: #45a049;
-            border-radius: 5px;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# # Custom CSS for horizontal navbar
+# st.markdown(
+#     """
+#     <style>
+#         .navbar {
+#             display: flex;
+#             justify-content: center;
+#             background-color: #4CAF50;
+#             padding: 10px;
+#             border-radius: 10px;
+#         }
+#         .navbar a {
+#             color: white;
+#             text-decoration: none;
+#             padding: 14px 20px;
+#             font-size: 18px;
+#             font-weight: bold;
+#         }
+#         .navbar a:hover {
+#             background-color: #45a049;
+#             border-radius: 5px;
+#         }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
 
-# JavaScript for URL routing in Streamlit
-st.markdown(
-    """
-    <div class="navbar">
-        <a href="?nav=🏠 Home">Home</a>
-        <a href="?nav=❓ Question Generator">Question Generator</a>
-        <a href="?nav=📖 Lesson Planner">Lesson Planner</a>
-        <a href="?nav=📽️ Presentation Generator">Presentation Generator</a>
-        <a href="?nav=✅ Rubrics Generator">Rubrics Generator</a>
-        <a href="?nav=📄 Question Paper Generator">Question Paper Generator</a>
+# # JavaScript for URL routing in Streamlit
+# st.markdown(
+#     """
+#     <div class="navbar">
+#         <a href="?nav=🏠 Home">Home</a>
+#         <a href="?nav=❓ Question Generator">Question Generator</a>
+#         <a href="?nav=📖 Lesson Planner">Lesson Planner</a>
+#         <a href="?nav=📽️ Presentation Generator">Presentation Generator</a>
+#         <a href="?nav=✅ Rubrics Generator">Rubrics Generator</a>
+#         <a href="?nav=📄 Question Paper Generator">Question Paper Generator</a>
 
-    </div>
-    <br>
-    """,
-    unsafe_allow_html=True
-)
+#     </div>
+#     <br>
+#     """,
+#     unsafe_allow_html=True
+# )
 
-# Extract the selected page from the URL query parameter
-query_params = st.query_params
-choice = query_params.get("nav") or "🏠 Home"  # Default to Home if no query param exists
+# # Extract the selected page from the URL query parameter
+# query_params = st.query_params
+# choice = query_params.get("nav") or "🏠 Home"  # Default to Home if no query param exists
 
 # Menu Options
-# menu = ["🏠 Home", "📖 Lesson Planner", "❓ Question Generator", "📽️ Presentation Generator",
-#         "✅ Rubrics Generator", "📄 Question Paper Generator"]
+menu = ["🏠 Home", "📖 Lesson Planner", "❓ Question Generator", "📽️ Presentation Generator",
+        "✅ Rubrics Generator", "📄 Question Paper Generator"]
 
-# choice = st.sidebar.radio("📌 Select a Tool", menu)
+choice = st.sidebar.radio("📌 Select a Tool", menu)
 # Call the function inside your main Streamlit app
 handle_file_upload()
 
