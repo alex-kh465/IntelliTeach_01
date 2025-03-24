@@ -4,6 +4,7 @@ from io import BytesIO
 from utils.ai_helper import generate_lesson_plan  # AI-based lesson plan generation
 from utils.file_handler import generate_docx
 
+
 def lesson_planner():
     st.subheader("📅 Lesson Planner")
     st.write("Plan your lessons with AI-generated topic structures.")
